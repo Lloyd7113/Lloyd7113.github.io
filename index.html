@@ -4,13 +4,18 @@
     </head>
     <body background="cosmosbg.png">
 
-    		<form action="user.js">
-  				First name:<br>
-  				<input type="text" name="keytag" value="Enter here"><br>
-  				Last name:<br>
-  				<input type="text" name="password" value="Password"><br><br>
-  				<input type="submit" value="Okay!">
+    		<form onsubmit="return false;" method="post" name="myForm">
+    		<label>Name</label>
+    		<input type="text" name="name" id="name" />
+    		<input type="submit" name="submit" onclick="validate()" />
 			</form>
+
+		<script>
+			validate = function() {
+ 			   var name = document.getElementById("name").value;
+ 			   alert("Your name is " +name);
+			}
+		</script>
 
     </body>
 </html>
