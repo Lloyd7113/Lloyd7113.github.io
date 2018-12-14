@@ -3,7 +3,7 @@
     	<p style="text-align:center;"><img src="cosmoslogo.png" alt="COSMOS" width="500" height="200" align="middle"></p>
     </head>
     <body background="cosmosbg.png">
-    		<form>
+    		<form action="store()">
   				First name:<br>
   				<input type="text" name="keytag" value="Keytag"><br>
   				Last name:<br>
@@ -11,7 +11,8 @@
   				<input type="submit" value="Okay!">
 			</form>
     	<script type="text/javascript">
-    		localStorage.setItem('Keytag', JSON.stringify(('keytag').serialize()));
+    		var key= document.getElementById("keytag");
+     		localStorage.setItem("s-keytag", key.value);
     	</script>
     </body>
 </html>
