@@ -3,16 +3,16 @@
     	<p style="text-align:center;"><img src="cosmoslogo.png" alt="COSMOS" width="500" height="200" align="middle"></p>
     </head>
     <body background="cosmosbg.png">
-    		<form action="store()">
+    		<form>
   				First name:<br>
-  				<input type="text" name="keytag" value="Keytag"><br>
+  				<input type="text" name="keytag" value="Enter here"><br>
   				Last name:<br>
   				<input type="text" name="password" value="Password"><br><br>
   				<input type="submit" value="Okay!">
 			</form>
     	<script type="text/javascript">
-    		var key= document.getElementById("keytag");
-     		localStorage.setItem("s-keytag", key.value);
+    		var input = document.getElementById("keytag");
+			localStorage.setItem("Key", input.value);
     	</script>
     </body>
 </html>
