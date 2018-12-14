@@ -1,5 +1,6 @@
 <html>
     <head>
+    	<title>COSMOS</title>
     	<p style="text-align:center;"><img src="cosmoslogo.png" alt="COSMOS" width="500" height="200" align="middle"></p>
     </head>
     <body background="cosmosbg.png">
@@ -13,8 +14,13 @@
 		<script>
 			validate = function() {
  			   var name = document.getElementById("name").value;
- 			   localStorage.setItem("Keytag", name);
- 			   window.location.href = "home.html";
+ 			   var checker = localStorage.getItem("Keytag");
+
+ 			   if (keytag == name){
+ 			   		window.location.href = "home.html";
+ 			   }else{
+ 			   		alert("Incorrect Keytag. Please try again.");
+ 			   }
 			}
 		</script>
 
